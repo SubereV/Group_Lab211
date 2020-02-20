@@ -1,12 +1,12 @@
 # Huong Dan
-A. Huong dan cai git:
+A. Hướng dẫn cài git:
   B1: truy cập https://git-scm.com/downloads
   B2: cài đăt file đã tải.
 
-B. Clone bai nhom ve may:
+B. Clone folder nhóm về máy:
   B1: Mở terminal hoặc windows+R => cmd
-  B2: cd Documents
-  B3: git clone 
+  B2: Chọn nơi lưu trữ: cd Documents
+  B3: Gõ git clone https://github.com/SubereV/Group_Lab211.git
 
 C. Cách tải upload File project:
   B1: mở terminal
