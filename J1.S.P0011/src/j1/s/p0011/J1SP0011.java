@@ -17,6 +17,7 @@ public class J1SP0011 {
     public static void main(String[] args) {
         // TODO code application logic here
         //Khang da code dong nay
+        // nghia dap anh nam nhu mot con dog
     }
     
 }
