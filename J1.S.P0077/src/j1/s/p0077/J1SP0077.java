@@ -9,13 +9,10 @@ package j1.s.p0077;
  *
  * @author khangvo
  */
-public class J1SP0077 
-{
-    
+public class J1SP0077 {
+
     public static void main(String[] args) {
 
-    
-      
         String path;
         String word;
         while (true) {

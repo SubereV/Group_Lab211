@@ -13,3 +13,10 @@ C. Cách tải upload File project:
   B2: GÕ git add .
   B3: Commit file: git commit -m "<Tên của bạn> <tên bài>"
   B4: Gửi bài lên nhóm: git push
+  
+  CODE: Duong: 81, 70
+        Nghia: 77, 76
+        Khanh: 74, 78
+        Nam  : 11, 75
+        Hieu : 73, 80, 79
+        Khang: 12, 71
