@@ -15,11 +15,17 @@ public class J1SP0074 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Matrix matrix = new Matrix();
+        Matrix matrix1 = new Matrix();
+        Matrix matrix2 = new Matrix();
 
-        matrix.enterMatrix();
+        System.out.println("Enter matrix 1-----------");
+        matrix1.enterMatrix();
+        System.out.println("Enter matrix 2-----------");
+        matrix2.enterMatrix();
+        Matrix Sum = new Matrix(matrix1.getNoRows(), matrix1.getNoCols());
+        Sum = matrix1.sumMatrix(matrix2);
         System.out.println("Display: ");
-        matrix.displayMatrix();
+        Sum.displayMatrix();
 
     }
 

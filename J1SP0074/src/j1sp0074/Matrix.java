@@ -12,38 +12,66 @@ package j1sp0074;
 public class Matrix {
 
     int[][] matrix;
-    int row, col;
+    int rows, cols;
 
     public Matrix() {
     }
 
-    public Matrix(int row, int col) {
-        this.row = row;
-        this.col = col;
+    public Matrix(int rows, int cols) {
+        this.rows = rows;
+        this.cols = cols;
+        matrix = new int[rows][cols];
     }
 
-    public void enterMatrix() {
+    public int getNoRows() {  // returns the total number of rows
+        return rows;
+    }
+
+    public int getNoCols() { // returns the total number of cols
+        return cols;
+    }
+
+    public int getValue(int row, int col) {
+        return matrix[row][col];
+    }
+
+    public void setValue(int row, int col, int value) {
+        matrix[row][col] = value;
+    }
+
+    public Matrix enterMatrix() {
         System.out.print("Enter no of rows: ");
-        row=Validation.checkInputIntLimit();
+        rows = Validation.checkInputIntLimit();
         System.out.print("Enter no of columns: ");
-        col=Validation.checkInputIntLimit();
-        matrix=new int[row][col];
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                matrix[i][j] = Validation.input.nextInt();
+        cols = Validation.checkInputIntLimit();
+        Matrix mt = new Matrix(rows, cols);
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.printf("Enter " + '[' + "%d" + ']' + '[' + "%d" + ']' + ":", i + 1, j + 1);
+                mt.setValue(i, j, Validation.checkInputIntLimit());
             }
         }
+        return mt;
     }
 
     public void displayMatrix() {
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                System.out.print(matrix[i][j] + " ");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(this.getValue(i, j) + " ");
             }
             System.out.println();
         }
     }
-//    public int[][] addMatrix(int[][] m1, int[][] m2){
-//       m1=new int[row][col];
-//    }
+
+    public Matrix sumMatrix(Matrix m2) {
+        int row1 = getNoRows();
+        int col1 = getNoCols();
+        Matrix sum = new Matrix(row1, col1);
+        for (int i = 0; i < row1; i++) {
+            for (int j = 0; j < col1; j++) {
+                sum.setValue(i, j, (getValue(i, j) + m2.getValue(i, j)));
+            }
+        }
+        return sum;
+    }
 }

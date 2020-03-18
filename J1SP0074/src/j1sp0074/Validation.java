@@ -19,8 +19,8 @@ public class Validation {
         while (true) {
             try {
                 int result = Integer.parseInt(Validation.input.nextLine().trim());
-
                 return result;
+
             } catch (NumberFormatException e) {
                 System.out.println("Please input digit");
                 System.out.println("Enter agian");
