@@ -22,3 +22,12 @@ C. Cách tải upload File project:
         Khang: 13, 71
 Cách solve conflict đơn giản nhất:
 git rm <file bị lỗi>
+
+
+
+Chia việc: - Nghĩa: Experience class > AddExCadidate() class
+	-Khánh: Fresher class > addFresher() class
+	-Dương: Inter > addInter() class 
+	-Nam: Search function
+	-Hieu: Build UI
+

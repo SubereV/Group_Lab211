@@ -7,6 +7,7 @@ package j1.l.p.pkg0022;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -15,5 +16,10 @@ import java.util.List;
 public class CandidateManager {
 
     private static final List<Candidate> clist = new ArrayList<>();
-
+    private static final Scanner input = new Scanner(System.in);
+    
+    public void addEx(){
+        System.out.println("Enter id: ");
+        String validation = Validation.inputString();
+    }
 }
