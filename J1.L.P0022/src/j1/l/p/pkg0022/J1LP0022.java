@@ -16,10 +16,6 @@ public class J1LP0022 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int[] arr = new int[1];
-        for (int i = 0; i < arr.length; i++) {
-            
-        }
+
     }
-    
 }
