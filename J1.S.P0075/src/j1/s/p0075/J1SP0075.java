@@ -1,21 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package j1.s.p0075;
 
-/**
- *
- * @author khangvo
- */
 public class J1SP0075 {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+	public static void main(String[] args) {
+		Manager m = new Manager();
+		while (true) {
+			int choice = m.menu();
+			switch (choice) {
+			case 1:
+				m.choice1();
+				break;
+			case 2:
+				m.choice2();
+				break;
+			case 3:
+				m.choice3();
+				break;
+			case 4:
+				m.choice4();
+				break;
+			case 5:
+				m.choice5();
+				break;
+			case 6:
+				System.out.println("Exit!");
+				return;
+			}
+		}
+	}
+
 }
