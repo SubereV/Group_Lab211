@@ -15,16 +15,29 @@ public class Validation {
 
     public static final Scanner input = new Scanner(System.in);
 
-    public static int checkInputIntLimit() {
+     public static int checkInputIntLimit(int min, int max) {
         while (true) {
             try {
                 int result = Integer.parseInt(Validation.input.nextLine().trim());
+                if (result < min || result > max) {
+                    throw new NumberFormatException();
+                }
                 return result;
-
             } catch (NumberFormatException e) {
-                System.out.println("Please input digit");
+                System.out.println("Please input number in range[" + min + "," + max + "]");
                 System.out.println("Enter agian");
             }
         }
+    }
+    public static int checkInputInt() {
+        while (true) {
+            try {
+                int result = Integer.parseInt(input.nextLine());
+                return result;
+            } catch (NumberFormatException ex) {
+                System.err.println("Re-input");
+            }
+        }
+
     }
 }
