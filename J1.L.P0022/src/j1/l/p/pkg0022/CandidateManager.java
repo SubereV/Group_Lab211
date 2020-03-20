@@ -49,5 +49,8 @@ public class CandidateManager {
                 candidate.getPhone(), candidate.getEmail(), candidate.getCandidateType()));
         System.err.println("Create success.");
     }
-
+    public void search() {
+		System.out.println("============EXPERIENCE CANDIDATE=============");
+		for()
+	}
 }

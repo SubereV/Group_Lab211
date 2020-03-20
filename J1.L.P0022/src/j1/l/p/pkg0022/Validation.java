@@ -129,9 +129,7 @@ public class Validation {
             return Graduation();
         }
     }
-<<<<<<< HEAD
 
-=======
      public static int checkInputExprience(int birthDate) {
         int yearCurrent = Calendar.getInstance().get(Calendar.YEAR);
         int age = yearCurrent - birthDate;
@@ -145,5 +143,5 @@ public class Validation {
         }
 
     }
->>>>>>> 016ae50a38ba5323380cdfcf829ae5af240527d4
+
 }

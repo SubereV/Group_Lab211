@@ -98,7 +98,10 @@ public class Candidate {
     public void setCandidateType(int candidateType) {
         this.candidateType = candidateType;
     }
-
+    
+    public void display() {
+		System.out.printf("%");
+	}
     @Override
     public String toString() {
         return "Candidate{" + "candidateId=" + candidateId + ", firstName=" + firstName + ", lastName=" + lastName + ", birthDate=" + birthDate + ", address=" + address + ", phone=" + phone + ", email=" + email + ", candidateType=" + candidateType + '}';
