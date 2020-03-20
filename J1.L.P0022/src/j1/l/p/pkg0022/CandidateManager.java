@@ -50,4 +50,32 @@ public class CandidateManager {
         System.err.println("Create success.");
     }
 
+    public static void createFresher() {
+        int type = 1;
+
+        System.out.print("Enter id: ");
+        String id = Validation.inputString();
+        System.out.print("Enter first name: ");
+        String firstName = Validation.inputString();
+        System.out.print("Enter last name: ");
+        String lastName = Validation.inputString();
+        System.out.print("Enter birth date: ");
+        int birthDate = Validation.BirthDate();
+        System.out.print("Enter address: ");
+        String address = Validation.inputString();
+        System.out.print("Enter phone: ");
+        String phone = Validation.Phone();
+        System.out.print("Enter email: ");
+        String email = Validation.Email();
+        Candidate candidate = new Candidate(id, firstName, lastName, birthDate, address, phone, email, type);
+        System.out.print("Enter graduation date: ");
+        String graduationDate = Validation.inputString();
+        System.out.print("Enter graduation rank: ");
+        String graduationRank = Validation.Graduation();
+        System.out.print("Enter university: ");
+        String education = Validation.inputString();
+        clist.add(new Fresher(graduationDate, graduationRank, education, candidate.getCandidateId(), candidate.getFirstName(), candidate.getLastName(), candidate.getBirthDate(),
+                candidate.getAddress(), candidate.getPhone(), candidate.getEmail(), candidate.getCandidateType()));
+        System.err.println("Create success.");
+    }
 }
