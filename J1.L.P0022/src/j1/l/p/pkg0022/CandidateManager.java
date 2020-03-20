@@ -21,7 +21,6 @@ public class CandidateManager {
     public static void addExperience() {
 
         int type = 0;
-
         System.out.print("Enter id: ");
         String id = Validation.inputString();
         System.out.print("Enter first name: ");
@@ -36,17 +35,13 @@ public class CandidateManager {
         String phone = Validation.Phone();
         System.out.print("Enter email: ");
         String email = Validation.Email();
-        Candidate candidate = new Candidate(id, firstName, lastName,
-                birthDate, address, phone, email, type);
-
         System.out.print("Enter year of experience: ");
-        int yearExperience = Validation.checkInputExprience(candidate.getBirthDate());
+        int yearExperience = Validation.checkInputExprience(birthDate);
         System.out.print("Enter professional skill: ");
         String professionalSkill = Validation.inputString();
-        clist.add(new Experience(yearExperience, professionalSkill,
-                candidate.getCandidateId(), candidate.getFirstName(), candidate.getLastName(),
-                candidate.getBirthDate(), candidate.getAddress(),
-                candidate.getPhone(), candidate.getEmail(), candidate.getCandidateType()));
+        
+        clist.add(new Experience(yearExperience, professionalSkill, id, firstName, lastName,
+                birthDate, address, phone, email, type));
         System.err.println("Create success.");
     }
 
