@@ -129,5 +129,21 @@ public class Validation {
             return Graduation();
         }
     }
+<<<<<<< HEAD
 
+=======
+     public static int checkInputExprience(int birthDate) {
+        int yearCurrent = Calendar.getInstance().get(Calendar.YEAR);
+        int age = yearCurrent - birthDate;
+        while (true) {
+            int yearExperience = intLimit(1, 100);
+            if (yearExperience > age) {
+                System.err.println("Experience must be smaller than age");
+            } else {
+                return yearExperience;
+            }
+        }
+
+    }
+>>>>>>> 016ae50a38ba5323380cdfcf829ae5af240527d4
 }
