@@ -73,4 +73,29 @@ public class CandidateManager {
                 candidate.getAddress(), candidate.getPhone(), candidate.getEmail(), candidate.getCandidateType()));
         System.err.println("Create success.");
     }
+    public static  void addIntern(){
+        int type = 2;
+        System.out.print("Enter id: ");
+        String id = Validation.inputString();
+        System.out.print("Enter first name: ");
+        String firstName = Validation.inputString();
+        System.out.print("Enter last name: ");
+        String lastName = Validation.inputString();
+        System.out.print("Enter birth date: ");
+        int birthDate = Validation.BirthDate();
+        System.out.print("Enter address: ");
+        String address = Validation.inputString();
+        System.out.print("Enter phone: ");
+        String phone = Validation.Phone();
+        System.out.print("Enter email: ");
+        String email = Validation.Email();
+        System.out.print("Enter major: ");
+        String major = Validation.inputString();
+        System.out.print("Enter semester: ");
+        String semester = Validation.inputString();
+        System.out.print("Enter Name of University: ");
+        String uniName= Validation.inputString();
+        clist.add(new Internship(major, semester,uniName, id, firstName, lastName, birthDate, address, phone, email, type));
+        System.out.println("Add Success!!!");
+    }
 }
