@@ -16,28 +16,18 @@ public class J1SP0074 {
 
     private static final Scanner in = new Scanner(System.in);
 
-    private static int checkInputInt() {
-        while (true) {
-            try {
-                int result = Integer.parseInt(in.nextLine());
-                return result;
-            } catch (NumberFormatException ex) {
-                System.err.println("Re-input");
-            }
-        }
-
-    }
+    
 
     private static int[][] inputMatrix(int n) {
         System.out.print("Enter Row Matrix: ");
-        int row = checkInputInt();
+        int row = Validation.checkInputInt();
         System.out.print("Enter Colum Matrix: ");
-        int col = checkInputInt();
+        int col = Validation.checkInputInt();
         int[][] matrix = new int[row][col];
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 System.out.printf("Enter Matrix " + n + ": [" + "%d" + "]" + "[" + "%d" + "]:", i + 1, j + 1);
-                matrix[i][j] = checkInputInt();
+                matrix[i][j] = Validation.checkInputInt();
             }
         }
         return matrix;
@@ -119,7 +109,9 @@ public class J1SP0074 {
         displayMatrix(matrixResult);
     }
 
-    private static void display() {
+   
+
+    public static void main(String[] args) throws IOException {
         System.out.println("----Enter matrix 1----- ");
         int[][] matrix1 = inputMatrix(1);
         System.out.println("----Enter matrix 2-----");
@@ -145,10 +137,6 @@ public class J1SP0074 {
                     return;
             }
         }
-    }
-
-    public static void main(String[] args) throws IOException {
-        display();
     }
 
 }
