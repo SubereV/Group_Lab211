@@ -108,6 +108,7 @@ public class Candidate {
 	}
 
 	public void display() {
-		System.out.printf("%-20s|%-5d|%-15s|%-15s|%-15s|%-2d\n", firstName, lastName, birthDate, address, phone, email, candidateType);
+		String name = firstName+" "+lastName;
+		System.out.printf("%-20s|%-5d|%-15s|%-15s|%-15s|%-2d\n", name, birthDate, address, phone, email, candidateType);
 	}
 }

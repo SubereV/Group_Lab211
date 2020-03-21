@@ -106,13 +106,13 @@ public class CandidateManager {
 		System.out.println("============EXPERIENCE CANDIDATE=============");
 		for (Candidate experience : clist) {
 			if (experience.getCandidateType() == 0) {
-				System.out.println(experience.getFirstName() + experience.getLastName());
+				System.out.println(experience.getFirstName() +" "+ experience.getLastName());
 			}
 		}
 		System.out.println("==============FRESHER CANDIDATE==============");
 		for (Candidate fresher : clist) {
 			if (fresher.getCandidateType() == 1) {
-				System.out.println(fresher.getFirstName() + fresher.getLastName());
+				System.out.println(fresher.getFirstName() +" "+ fresher.getLastName());
 			}
 		}
 		System.out.println("==============INTERN CANDIDATE===============");
