@@ -42,5 +42,5 @@ public class Experience extends Candidate {
     public void setProfessionalSkill(String professionalSkill) {
         this.professionalSkill = professionalSkill;
     }
-
+    
 }
