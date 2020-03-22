@@ -16,6 +16,17 @@ public class J1SP0081 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Worker worker = new Worker();
+        worker.creatBeeList();
+        worker.damage();
+        System.out.println("----------------");
+        Queen queen = new Queen();
+        queen.creatBeeList();
+        queen.damage();
+        System.out.println("----------------");
+        Drone drone = new Drone();
+        drone.creatBeeList();
+        drone.damage();
     }
     
 }

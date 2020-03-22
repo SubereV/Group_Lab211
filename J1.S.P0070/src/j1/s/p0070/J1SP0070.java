@@ -16,6 +16,21 @@ public class J1SP0070 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        accountDriverVi vi = new  accountDriverVi();
+        accountDriverEn en = new accountDriverEn();
+        int choice;
+        Manager.menu();
+        do {
+            choice = Validation.checkInputInt();
+            switch (choice) {
+                case 1:
+                    vi.checking();
+                    break;
+                case 2:
+                    en.checking();
+                    break;
+            }
+        } while (choice > 0 && choice < 3);
     }
     
 }
