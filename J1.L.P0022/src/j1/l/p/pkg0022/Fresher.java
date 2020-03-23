@@ -11,7 +11,7 @@ package j1.l.p.pkg0022;
  */
 public class Fresher extends Candidate {
 
-    private String graduationDate;
+    private int graduationDate;
     private String graduationRank;
     private String education;
 
@@ -19,24 +19,24 @@ public class Fresher extends Candidate {
         super();
     }
 
-    public Fresher(String graduationDate, String graduationRank, String education) {
+    public Fresher(int graduationDate, String graduationRank, String education) {
         this.graduationDate = graduationDate;
         this.graduationRank = graduationRank;
         this.education = education;
     }
 
-    public Fresher(String graduationDate, String graduationRank, String education, String candidateId, String firstName, String lastName, int birthDate, String address, String phone, String email, int candidateType) {
+    public Fresher(int graduationDate, String graduationRank, String education, String candidateId, String firstName, String lastName, int birthDate, String address, String phone, String email, int candidateType) {
         super(candidateId, firstName, lastName, birthDate, address, phone, email, candidateType);
         this.graduationDate = graduationDate;
         this.graduationRank = graduationRank;
         this.education = education;
     }
 
-    public String getGraduationDate() {
+    public int getGraduationDate() {
         return graduationDate;
     }
 
-    public void setGraduationDate(String graduationDate) {
+    public void setGraduationDate(int graduationDate) {
         this.graduationDate = graduationDate;
     }
 

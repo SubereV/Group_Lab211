@@ -18,7 +18,7 @@ public class CandidateManager {
 	private static final List<Candidate> clist = new ArrayList<>();
 	private static final Scanner input = new Scanner(System.in);
 
-	public static void addExperience() {
+	public void createExperience() {
 
 		int type = 0;
 		System.out.print("Enter id: ");
@@ -45,7 +45,7 @@ public class CandidateManager {
 		System.err.println("Create success.");
 	}
 
-	public static void createFresher() {
+	public void createFresher() {
 		int type = 1;
 
 		System.out.print("Enter id: ");
@@ -62,20 +62,19 @@ public class CandidateManager {
 		String phone = Validation.Phone();
 		System.out.print("Enter email: ");
 		String email = Validation.Email();
-		Candidate candidate = new Candidate(id, firstName, lastName, birthDate, address, phone, email, type);
 		System.out.print("Enter graduation date: ");
-		String graduationDate = Validation.inputString();
+		int graduationDate = Validation.Year();
 		System.out.print("Enter graduation rank: ");
 		String graduationRank = Validation.Graduation();
 		System.out.print("Enter university: ");
 		String education = Validation.inputString();
-		clist.add(new Fresher(graduationDate, graduationRank, education, candidate.getCandidateId(),
-				candidate.getFirstName(), candidate.getLastName(), candidate.getBirthDate(), candidate.getAddress(),
-				candidate.getPhone(), candidate.getEmail(), candidate.getCandidateType()));
+		clist.add(new Fresher(graduationDate, graduationRank, education, id,
+				firstName, lastName, birthDate, address,
+				phone, email, type));
 		System.err.println("Create success.");
 	}
 
-	public static void addIntern() {
+	public void createIntern() {
 		int type = 2;
 		System.out.print("Enter id: ");
 		String id = Validation.inputString();
@@ -122,7 +121,7 @@ public class CandidateManager {
 			}
 		}
 		System.out.println();
-		System.out.print("Input Candidate name (First name or Last name: ");
+		System.out.print("Input Candidate name (First name or Last name): ");
 		String name = Validation.inputString(); 
 		System.out.print("Input type of candidate: ");
 		int type = input.nextInt(); 

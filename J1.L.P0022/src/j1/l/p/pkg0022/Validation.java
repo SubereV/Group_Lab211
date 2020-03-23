@@ -30,12 +30,14 @@ public class Validation {
         String in = inputString();
         if (in.matches("\\d+")) {
             int dof = Integer.parseInt(in);
-            if (dof < 1900 && dof > Calendar.getInstance().get(Calendar.YEAR)) {
+            System.out.println(dof);
+            if (dof < 1900 || dof > Calendar.getInstance().get(Calendar.YEAR)) {
                 System.err.println("Invalid year!");
                 System.out.print("> Year: ");
                 return BirthDate();
+            } else {
+                return dof;
             }
-            return dof;
         } else {
             System.err.println("Input must be a digit!");
             System.out.print("> Year: ");
@@ -60,7 +62,7 @@ public class Validation {
     public static String Phone() {
         String phone = inputString();
         if (phone.matches("\\d+")) {
-            if (phone.matches("\\d{9}+")) {
+            if (phone.matches("0\\d{9}+")) {
                 return phone;
             } else {
                 System.err.println("Phone number must be at least 10 numbers!");
@@ -101,7 +103,7 @@ public class Validation {
             return Year();
         }
     }
-    
+
     public static boolean accept() {
         while (true) {
             String result = inputString().trim();
@@ -114,7 +116,7 @@ public class Validation {
             System.out.print("> Enter again: ");
         }
     }
-    
+
     public static String Graduation() {
         while (true) {
             String result = inputString();
@@ -130,13 +132,14 @@ public class Validation {
         }
     }
 
-     public static int checkInputExprience(int birthDate) {
+    public static int checkInputExprience(int birthDate) {
         int yearCurrent = Calendar.getInstance().get(Calendar.YEAR);
         int age = yearCurrent - birthDate;
         while (true) {
             int yearExperience = intLimit(1, 100);
             if (yearExperience > age) {
                 System.err.println("Experience must be smaller than age");
+                System.out.println(">Year of experience: ");
             } else {
                 return yearExperience;
             }
