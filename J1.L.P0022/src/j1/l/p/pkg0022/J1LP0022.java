@@ -28,22 +28,16 @@ public class J1LP0022 {
             int choice = Validation.intLimit(1, 5);
             switch (choice) {
                 case 1:
-                    do {
-                        candidate.createExperience();
-                        System.out.print("Do you to continue? Y/N: ");
-                    } while (Validation.accept());
+                    candidate.createExperience();
+                    System.out.print("Do you to continue? Y/N: ");
                     break;
                 case 2:
-                    do{
-                        candidate.createFresher();
-                        System.out.print("Do you to continue? Y/N: ");
-                    } while (Validation.accept());
+                    candidate.createFresher();
+                    System.out.print("Do you to continue? Y/N: ");
                     break;
                 case 3:
-                    do{
-                        candidate.createIntern();
-                        System.out.print("Do you to continue? Y/N: ");
-                    } while (Validation.accept());
+                    candidate.createIntern();
+                    System.out.print("Do you to continue? Y/N: ");
                     break;
                 case 4:
                     candidate.search();
